@@ -11,6 +11,7 @@ import screenshotExpenses from '@/images/screenshots/expenses.png'
 import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 import screenshotDashboard from '@/images/screenshots/dashboard.png'
 import screenshotAgenda from '@/images/screenshots/agenda.png'
+import screenshotOrcamentos from '@/images/screenshots/orcamentos.png'
 
 const features = [
   {
@@ -29,7 +30,7 @@ const features = [
     title: 'Orçamentos',
     description:
       'Crie e envie orçamentos precisos e profissionais para seus clientes. Acompanhe o status dos orçamentos e converta mais vendas com facilidade.',
-    image: screenshotVatReturns,
+    image: screenshotOrcamentos,
   },
   {
     title: 'Dashboard',
@@ -65,14 +66,14 @@ export function PrimaryFeatures() {
       aria-label="Features for running your books"
       className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32"
     >
-      <Image
+      {/* <Image
         className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
         src={backgroundImage}
         alt=""
         width={2245}
         height={1636}
         unoptimized
-      />
+      /> */}
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">

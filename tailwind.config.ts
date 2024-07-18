@@ -4,6 +4,7 @@ import { type Config } from 'tailwindcss'
 
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  // 'bg-blue-600': '#5234bf',
   theme: {
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -21,8 +22,24 @@ export default {
       '9xl': ['8rem', { lineHeight: '1' }],
     },
     extend: {
+      backgroundColor: {
+        blue: {
+          200: '#f7f9fc',
+          500: '#8d9aa6',
+          600: '#5234bf',
+          900: '#1a202c',
+        },
+      },
       borderRadius: {
         '4xl': '2rem',
+      },
+      colors: {
+        blue: {
+          200: '#f7f9fc',
+          500: '#8d9aa6',
+          600: '#5234bf',
+          900: '#1a202c',
+        },
       },
       fontFamily: {
         sans: 'var(--font-inter)',
