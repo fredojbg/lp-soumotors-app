@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import souMotors from '@/images/logo-soumotors.png'
+import Image from 'next/image'
 import {
   Popover,
   PopoverButton,
@@ -14,7 +15,6 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
-import Image from 'next/image'
 
 function MobileNavLink({
   href,
@@ -102,11 +102,11 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="/login">Sign in</NavLink>
+              <NavLink href="app.soumotors.com">Entrar</NavLink>
             </div>
             <Button href="/register" color="blue">
               <span>
-                Get started <span className="hidden lg:inline">today</span>
+                Começar <span className="hidden lg:inline">hoje</span>
               </span>
             </Button>
             <div className="-mr-1 md:hidden">

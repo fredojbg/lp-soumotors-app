@@ -105,7 +105,7 @@ function Plan({
         className="mt-8"
         aria-label={`Get started with the ${name} plan for ${price}`}
       >
-        Get started
+        Iniciar
       </Button>
     </section>
   )
@@ -123,46 +123,42 @@ export function Pricing() {
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
               <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
-              <span className="relative">Simple pricing,</span>
+              <span className="relative">Preços simples,</span>
             </span>{' '}
-            for everyone.
+            para todos.
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-            It doesn’t matter what size your business is, our software won’t
-            work well for you.
+            Não importa o tamanho do seu negócio, nosso software se adapta
+            perfeitamente às suas necessidades.
           </p>
         </div>
-        <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
+        <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-2 xl:mx-0 xl:gap-x-8">
           <Plan
-            name="Starter"
-            price="$9"
-            description="Good for anyone who is self-employed and just getting started."
-            href="/register"
+            name="Iniciante"
+            price="R$ 99,90"
+            description="Bom para quem é autônomo e está começando agora."
+            href="https://app.soumotors.com/sign-up"
             features={[
-              'Send 10 quotes and invoices',
-              'Connect up to 2 bank accounts',
-              'Track up to 15 expenses per month',
-              'Manual payroll support',
-              'Export up to 3 reports',
+              'Envie até 25 orçamentos por mês.',
+              'Suporte para 1 atendente.',
+              'Exporte até 1 relatório.',
             ]}
           />
           <Plan
             featured
-            name="Small business"
-            price="$15"
-            description="Perfect for small / medium sized businesses."
-            href="/register"
+            name="Intermediário"
+            price="R$ 145,90"
+            description="Perfeito para pequenas e médias empresas."
+            href="https://app.soumotors.com/sign-up"
             features={[
-              'Send 25 quotes and invoices',
-              'Connect up to 5 bank accounts',
-              'Track up to 50 expenses per month',
-              'Automated payroll support',
-              'Export up to 12 reports',
-              'Bulk reconcile transactions',
-              'Track in multiple currencies',
+              'Envie até 100 orçamentos e faturas por mês.',
+              'Exporte até 10 relatórios.',
+              'Suporte para até 2 atendentes.',
+              'Integração avançada com WhatsApp para notificações e agendamentos.',
+              'Acesso a relatórios detalhados com Inteligência Artificial.',
             ]}
           />
-          <Plan
+          {/* <Plan
             name="Enterprise"
             price="$39"
             description="For even the biggest enterprise companies."
@@ -174,7 +170,7 @@ export function Pricing() {
               'Automated payroll support',
               'Export up to 25 reports, including TPS',
             ]}
-          />
+          /> */}
         </div>
       </Container>
     </section>

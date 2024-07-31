@@ -32,7 +32,7 @@ export function Hero() {
         Automatize processos, reduza custos e controle o seu negócio de ponta a
         ponta.
       </p>
-      <div className="mt-10 flex justify-center gap-x-6">
+      <div className="mb-20 mt-10 flex justify-center gap-x-6">
         <Button href="/register">Demo</Button>
         <Button
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -47,7 +47,7 @@ export function Hero() {
           <span className="ml-3">Ver video</span>
         </Button>
       </div>
-      <div className="lg:mt-34 mt-36">
+      {/* <div className="lg:mt-34 mt-36">
         <p className="font-display text-base text-slate-900">
           Trusted by these six companies so far
         </p>
@@ -81,7 +81,7 @@ export function Hero() {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </Container>
   )
 }

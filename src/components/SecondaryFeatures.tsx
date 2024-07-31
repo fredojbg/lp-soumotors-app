@@ -6,9 +6,9 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import screenshotContacts from '@/images/screenshots/contacts.png'
-import screenshotInventory from '@/images/screenshots/inventory.png'
-import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
+import screenshotAgenda from '@/images/produto/criar-agendamento.png'
+import screenshotOrcamentos from '@/images/produto/criar-orcamento.png'
+import screenshotService from '@/images/produto/criar-servico.png'
 
 interface Feature {
   name: React.ReactNode
@@ -20,12 +20,12 @@ interface Feature {
 
 const features: Array<Feature> = [
   {
-    name: 'Despesas',
+    name: 'Criar Orçamentos',
     summary:
-      'Controle todas as suas despesas em um só lugar. Organize, categorize e acompanhe seus gastos de forma eficiente.',
+      'Elabore orçamentos detalhados e precisos para seus clientes com facilidade.',
     description:
-      'Fique no controle com uma visão clara de todas as suas despesas. Gerencie seus custos e mantenha suas finanças organizadas.',
-    image: screenshotProfitLoss,
+      'Crie e gerencie orçamentos personalizados, permitindo aos clientes entenderem os custos envolvidos nos serviços. Organize os itens, aplique descontos e acompanhe a aprovação dos orçamentos.',
+    image: screenshotOrcamentos,
     icon: function ReportingIcon() {
       let id = useId()
       return (
@@ -55,12 +55,12 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Relatórios',
+    name: 'Criar Agendamento',
     summary:
-      'Acompanhe o desempenho da sua oficina com relatórios detalhados e exporte os dados facilmente para análise.',
+      'Facilite o processo de marcação de serviços com um sistema de agendamento eficiente.',
     description:
-      'Tome decisões informadas com relatórios detalhados e insights valiosos. Exporte dados para Excel e analise como preferir.',
-    image: screenshotInventory,
+      'Permita que seus clientes agendem serviços de forma rápida e prática. Organize a disponibilidade da sua equipe, envie lembretes automáticos e reduza no-shows com nosso sistema de agendamento intuitivo.',
+    image: screenshotAgenda,
     icon: function InventoryIcon() {
       return (
         <>
@@ -83,12 +83,12 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Checklist',
+    name: 'Criar Serviço',
     summary:
-      'Garanta que todos os passos dos serviços sejam seguidos com um checklist personalizado. Aumente a eficiência e a qualidade dos serviços.',
+      'Defina e organize os serviços oferecidos pela sua oficina com clareza e eficiência.',
     description:
-      'Mantenha a qualidade com checklists personalizados. Certifique-se de que cada serviço é realizado corretamente e com eficiência.',
-    image: screenshotContacts,
+      'Configure e gerencie os diversos serviços oferecidos, especificando detalhes como preço, duração e materiais necessários. Facilite o entendimento dos clientes sobre o que está incluído em cada serviço e otimize o processo de atendimento.',
+    image: screenshotService,
     icon: function ContactsIcon() {
       return (
         <>

@@ -7,13 +7,19 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
+import screenshotClients from '@/images/produto/clientes.png'
 import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
-import screenshotDashboard from '@/images/screenshots/dashboard.png'
-import screenshotAgenda from '@/images/screenshots/agenda.png'
-import screenshotOrcamentos from '@/images/screenshots/orcamentos.png'
+import screenshotDashboard from '@/images/produto/dashboard.png'
+import screenshotAgenda from '@/images/produto/agenda.png'
+import screenshotOrcamentos from '@/images/produto/orcamentos.png'
 
 const features = [
+  {
+    title: 'Dashboard',
+    description:
+      'Tenha uma visão geral do desempenho da sua oficina com nosso dashboard intuitivo. Veja um resumo das principais métricas e tome decisões informadas rapidamente.',
+    image: screenshotDashboard,
+  },
   {
     title: 'Agendamentos',
     description:
@@ -21,22 +27,16 @@ const features = [
     image: screenshotAgenda,
   },
   {
-    title: 'Controle Financeiro',
+    title: 'Controle de Clientes',
     description:
-      'Tenha uma visão clara e precisa das finanças da sua oficina. Organize todas as suas despesas e receitas em um só lugar, de forma prática e eficiente.',
-    image: screenshotExpenses,
+      'Tenha uma visão clara e precisa de seus clientes da sua oficina de forma prática e eficiente.',
+    image: screenshotClients,
   },
   {
     title: 'Orçamentos',
     description:
       'Crie e envie orçamentos precisos e profissionais para seus clientes. Acompanhe o status dos orçamentos e converta mais vendas com facilidade.',
     image: screenshotOrcamentos,
-  },
-  {
-    title: 'Dashboard',
-    description:
-      'Tenha uma visão geral do desempenho da sua oficina com nosso dashboard intuitivo. Veja um resumo das principais métricas e tome decisões informadas rapidamente.',
-    image: screenshotDashboard,
   },
 ]
 
