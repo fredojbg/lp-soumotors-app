@@ -96,13 +96,13 @@ export function Header() {
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#features">Funcionalidades</NavLink>
-              <NavLink href="#testimonials">Depoimentos</NavLink>
+              {/* <NavLink href="#testimonials">Depoimentos</NavLink> */}
               <NavLink href="#pricing">Preços</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="app.soumotors.com">Entrar</NavLink>
+              {/* <NavLink href="app.soumotors.com">Entrar</NavLink> */}
             </div>
             <Button href="/register" color="blue">
               <span>
