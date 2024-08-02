@@ -75,10 +75,10 @@ function MobileNavigation() {
         className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in"
       >
         <MobileNavLink href="#features">Funcionalidades</MobileNavLink>
-        <MobileNavLink href="#testimonials">Depoimentos</MobileNavLink>
+        {/* <MobileNavLink href="#testimonials">Depoimentos</MobileNavLink> */}
         <MobileNavLink href="#pricing">Preços</MobileNavLink>
-        <hr className="m-2 border-slate-300/40" />
-        <MobileNavLink href="app.soumotors.com">Entrar</MobileNavLink>
+        {/* <hr className="m-2 border-slate-300/40" /> */}
+        {/* <MobileNavLink href="app.soumotors.com">Entrar</MobileNavLink> */}
       </PopoverPanel>
     </Popover>
   )
@@ -104,7 +104,7 @@ export function Header() {
             <div className="hidden md:block">
               {/* <NavLink href="app.soumotors.com">Entrar</NavLink> */}
             </div>
-            <Button href="/register" color="blue">
+            <Button href="https://app.soumotors.com/sign-up" color="blue">
               <span>
                 Começar <span className="hidden lg:inline">hoje</span>
               </span>

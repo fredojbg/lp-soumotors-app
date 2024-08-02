@@ -9,12 +9,16 @@ import { Container } from '@/components/Container'
 import screenshotAgenda from '@/images/produto/criar-agendamento.png'
 import screenshotOrcamentos from '@/images/produto/criar-orcamento.png'
 import screenshotService from '@/images/produto/criar-servico.png'
+import screenshosMobileOrcamentos from '@/images/produto/orcamento-mobile.png'
+import screenshosMobileAgendamento from '@/images/produto/criar-agendamento-mobile.png'
+import screenshosMobileService from '@/images/produto/adicionar-servicio-mobile.png'
 
 interface Feature {
   name: React.ReactNode
   summary: string
   description: string
   image: ImageProps['src']
+  imageMobile: ImageProps['src']
   icon: React.ComponentType
 }
 
@@ -26,6 +30,7 @@ const features: Array<Feature> = [
     description:
       'Crie e gerencie orçamentos personalizados, permitindo aos clientes entenderem os custos envolvidos nos serviços. Organize os itens, aplique descontos e acompanhe a aprovação dos orçamentos.',
     image: screenshotOrcamentos,
+    imageMobile: screenshosMobileOrcamentos,
     icon: function ReportingIcon() {
       let id = useId()
       return (
@@ -61,6 +66,7 @@ const features: Array<Feature> = [
     description:
       'Permita que seus clientes agendem serviços de forma rápida e prática. Organize a disponibilidade da sua equipe, envie lembretes automáticos e reduza no-shows com nosso sistema de agendamento intuitivo.',
     image: screenshotAgenda,
+    imageMobile: screenshosMobileAgendamento,
     icon: function InventoryIcon() {
       return (
         <>
@@ -89,6 +95,7 @@ const features: Array<Feature> = [
     description:
       'Configure e gerencie os diversos serviços oferecidos, especificando detalhes como preço, duração e materiais necessários. Facilite o entendimento dos clientes sobre o que está incluído em cada serviço e otimize o processo de atendimento.',
     image: screenshotService,
+    imageMobile: screenshosMobileService,
     icon: function ContactsIcon() {
       return (
         <>
@@ -155,10 +162,10 @@ function FeaturesMobile() {
           <Feature feature={feature} className="mx-auto max-w-2xl" isActive />
           <div className="relative mt-10 pb-10">
             <div className="absolute -inset-x-4 bottom-0 top-8 bg-slate-200 sm:-inset-x-6" />
-            <div className="relative mx-auto w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
+            <div className="relative mx-auto overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
               <Image
                 className="w-full"
-                src={feature.image}
+                src={feature.imageMobile}
                 alt=""
                 sizes="52.75rem"
               />
