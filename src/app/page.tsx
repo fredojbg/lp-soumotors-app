@@ -11,7 +11,7 @@ import { Testimonials } from '@/components/Testimonials'
 export default function Home() {
   return (
     <>
-      <Script>
+      <Script id="chat-crisp">
         {
           'window.$crisp=[];window.CRISP_WEBSITE_ID="173766c7-3164-4941-8ff1-a6edeaa4e39a";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();'
         }
