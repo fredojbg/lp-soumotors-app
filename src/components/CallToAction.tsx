@@ -8,7 +8,7 @@ export function CallToAction() {
   return (
     <section
       id="get-started-today"
-      className="relative overflow-hidden bg-blue-600 py-32"
+      className="relative overflow-hidden bg-blue-600 py-16"
     >
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">

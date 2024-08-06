@@ -56,6 +56,7 @@ function Plan({
   description,
   href,
   features,
+  featuresFuture = [],
   featured = false,
 }: {
   name: string
@@ -63,6 +64,7 @@ function Plan({
   description: string
   href: string
   features: Array<string>
+  featuresFuture?: Array<string>
   featured?: boolean
 }) {
   return (
@@ -97,6 +99,14 @@ function Plan({
             <span className="ml-4">{feature}</span>
           </li>
         ))}
+        {featuresFuture.map((feature) => (
+          <li key={feature} className="flex">
+            <CheckIcon className={featured ? 'text-white' : 'text-slate-400'} />
+            <span className="ml-4">
+              {feature} <span className="text-green-500">(Em breve)</span>
+            </span>
+          </li>
+        ))}
       </ul>
       <Button
         href={href}
@@ -122,7 +132,7 @@ export function Pricing() {
         <div className="md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
-              <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
+              {/* <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" /> */}
               <span className="relative">Preços simples,</span>
             </span>{' '}
             para todos.
@@ -157,20 +167,11 @@ export function Pricing() {
               'Integração avançada com WhatsApp para notificações e agendamentos.',
               'Acesso a relatórios detalhados com Inteligência Artificial.',
             ]}
-          />
-          {/* <Plan
-            name="Enterprise"
-            price="$39"
-            description="For even the biggest enterprise companies."
-            href="/register"
-            features={[
-              'Send unlimited quotes and invoices',
-              'Connect up to 15 bank accounts',
-              'Track up to 200 expenses per month',
-              'Automated payroll support',
-              'Export up to 25 reports, including TPS',
+            featuresFuture={[
+              'Emita até 100 notas fiscais eletrônicas.',
+              'Integração com seu banco para conciliação bancária.',
             ]}
-          /> */}
+          />
         </div>
       </Container>
     </section>
