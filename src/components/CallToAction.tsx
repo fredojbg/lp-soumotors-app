@@ -24,7 +24,7 @@ export function CallToAction() {
             color="white"
             className="mt-10"
           >
-            Faça uma Demo para descobrir todos os benefícios.
+            Experimente grátis por 7 dias 🚀
           </Button>
         </div>
       </Container>
