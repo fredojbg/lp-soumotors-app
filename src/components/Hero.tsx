@@ -26,7 +26,7 @@ export function Hero() {
           </svg>
           <span className="relative">aumentando</span>
         </span>{' '}
-        lucro e diminuindo os custo!
+        lucro e diminuindo os custos!
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
         Automatize processos, reduza custos e controle o seu negócio de ponta a
