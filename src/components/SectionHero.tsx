@@ -11,7 +11,7 @@ export default function SectionHero() {
   return (
     <section className="bg-black-haze-50">
       <div className="relative max-w-[1440px] w-full min-h-screen mx-auto lg:min-h-[calc(100vh-90px)]">
-        <div className="relative max-w-[1240px] w-full py-40 px-4 mx-auto z-10 lg:py-20">
+        <div className="relative max-w-[1240px] w-full py-28 xm:py-40 px-4 mx-auto z-10 lg:py-20">
           <span className="block text-sm leading-4 lg:text-base lg:leading-5 text-purple-heart-700 font-semibold uppercase mb-2">
             Somos a soumotors
           </span>
@@ -56,7 +56,7 @@ export default function SectionHero() {
         />
 
         <Image
-          className="hidden absolute right-0 bottom-0 xm:block max-w-[calc(100%-20px)] w-full lg:hidden sm:max-w-2xl"
+          className="absolute right-0 bottom-0 xm:block max-w-[80%] xm:max-w-[calc(100%-20px)] w-full lg:hidden sm:max-w-2xl"
           src={heroMob}
           alt="Imagem desktop da plataforma"
         />

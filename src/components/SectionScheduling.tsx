@@ -52,7 +52,7 @@ export default function SectionScheduling() {
           />
         </div>
 
-        <div className="-order-1 lg:order-1 max-w-[500px] w-full mb-6 lg:ml-auto lg:mb-0">
+        <div className="-order-1 lg:order-1 max-w-[500px] w-full mb-6 lg:ml-auto lg:mb-0 lg:sticky lg:top-6">
           <Image
             className="h-[52px] mb-8"
             src={schedulingIcon}
