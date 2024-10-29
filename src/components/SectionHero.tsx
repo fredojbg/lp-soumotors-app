@@ -4,8 +4,8 @@ import Link from "./Link";
 import { TEST_DRIVE_LINK } from "@/constant/test-drive-link";
 
 import mouseIcon from "@/images/icons/mouse.svg"
-import heroDesk from "@/images/hero-image-area-desktop-2.webp"
-import heroMob from "@/images/hero-image-area-mobile.webp"
+import heroDesk from "@/images/hero-image-area-desktop-2.png"
+import heroMob from "@/images/hero-image-area-mobile.png"
 
 export default function SectionHero() {
   return (
@@ -56,9 +56,9 @@ export default function SectionHero() {
         />
 
         <Image
-          className="absolute right-0 bottom-0 xm:block max-w-[80%] xm:max-w-[calc(100%-20px)] w-full lg:hidden sm:max-w-2xl"
+          className="absolute right-0 bottom-0 xm:block max-w-[80%] sm:max-w-[calc(100%-20px)] w-full lg:hidden md:max-w-2xl"
           src={heroMob}
-          alt="Imagem desktop da plataforma"
+          alt="Imagem mobile da plataforma"
         />
       </div>
     </section>

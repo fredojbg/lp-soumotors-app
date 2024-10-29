@@ -63,6 +63,7 @@ export default function PlanCard({
         {...(isHighlighted ? {
           styleVariants: { color: "secondary" }
         } : {})}
+        externalLink
       >
         Escolher este plano
       </Link>

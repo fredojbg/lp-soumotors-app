@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import logoSrc from "@/images/logo.svg"
+import logoSrc from "@/images/logo.png"
 
 export function Logo() {
   return (

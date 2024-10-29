@@ -1,10 +1,12 @@
+import { TEST_DRIVE_LINK } from "@/constant/test-drive-link"
+
 import PlanCard, { PlanCardPropsTypes } from "./PlanCard"
 
 const planStarter: PlanCardPropsTypes = {
   name: "Starter",
   price: "R$ 55,90 / mês",
   shortDescription: "Plano básico para pequenas empresas.",
-  link: "#",
+  link: TEST_DRIVE_LINK,
   actions: [
     { label: "Agendamentos ilimitados.", isInclude: true },
     { label: "Contatos ilimitados.", isInclude: true },
@@ -26,7 +28,7 @@ const planGrowth: PlanCardPropsTypes = {
   name: "Growth",
   price: "R$ 145,90 / mês",
   shortDescription: "Ideal para empresas em crescimento.",
-  link: "#",
+  link: TEST_DRIVE_LINK,
   actions: [
     { label: "Agendamentos ilimitados.", isInclude: true },
     { label: "Contatos ilimitados.", isInclude: true },
@@ -47,7 +49,7 @@ const planBusiness: PlanCardPropsTypes = {
   name: "Business",
   price: "R$ 250,90 / mês",
   shortDescription: "Ideal para grandes empresas.",
-  link: "#",
+  link: TEST_DRIVE_LINK,
   actions: [
     { label: "Agendamentos ilimitados.", isInclude: true },
     { label: "Contatos ilimitados.", isInclude: true },
