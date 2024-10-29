@@ -1,7 +1,9 @@
 import { type Metadata } from 'next'
-import { Inter, Lexend } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import clsx from 'clsx'
 
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
@@ -56,12 +58,6 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const lexend = Lexend({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-lexend',
-})
-
 export default function RootLayout({
   children,
 }: {
@@ -73,10 +69,17 @@ export default function RootLayout({
       className={clsx(
         'h-full scroll-smooth bg-white antialiased',
         inter.variable,
-        lexend.variable,
       )}
     >
-      <body className="flex h-full flex-col">{children}</body>
+      <body className="flex h-full flex-col">
+        <Header />
+
+        <main className='flex-1'>
+          {children}
+        </main>
+
+        <Footer /> 
+      </body>
     </html>
   )
 }
