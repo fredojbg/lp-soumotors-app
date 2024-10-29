@@ -1,27 +1,16 @@
-import Link from 'next/link'
-
-import { Button } from '@/components/Button'
-import { Logo } from '@/components/Logo'
-import { SlimLayout } from '@/components/SlimLayout'
+import Link from '@/components/Link'
 
 export default function NotFound() {
   return (
-    <SlimLayout>
-      <div className="flex">
-        <Link href="/" aria-label="Home">
-          <Logo className="h-10 w-auto" />
-        </Link>
-      </div>
-      <p className="mt-20 text-sm font-medium text-gray-700">404</p>
-      <h1 className="mt-3 text-lg font-semibold text-gray-900">
-        Page not found
+    <div className='flex flex-col justify-center items-center gap-6 h-full bg-black-haze-50'>
+      <h1 className='text-2xl lg:text-[28px]/[36.4px] font-semibold text-mirage-950 text-center'>
+        Oops!<br />
+        A pagina não foi encontrada
       </h1>
-      <p className="mt-3 text-sm text-gray-700">
-        Sorry, we couldn’t find the page you’re looking for.
-      </p>
-      <Button href="/" className="mt-10">
-        Go back home
-      </Button>
-    </SlimLayout>
+
+      <Link href="/" className='max-w-[180px]'>
+        Voltar para a Home
+      </Link>
+    </div>
   )
 }

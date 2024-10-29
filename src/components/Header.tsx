@@ -1,120 +1,104 @@
 'use client'
 
-import Link from 'next/link'
-import souMotors from '@/images/logo-soumotors.png'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-import {
-  Popover,
-  PopoverButton,
-  PopoverBackdrop,
-  PopoverPanel,
-} from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
-import { NavLink } from '@/components/NavLink'
+import { TEST_DRIVE_LINK } from '@/constant/test-drive-link'
 
-function MobileNavLink({
-  href,
-  children,
-}: {
-  href: string
-  children: React.ReactNode
-}) {
-  return (
-    <PopoverButton as={Link} href={href} className="block w-full p-2">
-      {children}
-    </PopoverButton>
-  )
-}
+import { Logo } from './Logo'
+import Link from './Link'
 
-function MobileNavIcon({ open }: { open: boolean }) {
-  return (
-    <svg
-      aria-hidden="true"
-      className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
-      fill="none"
-      strokeWidth={2}
-      strokeLinecap="round"
-    >
-      <path
-        d="M0 1H14M0 7H14M0 13H14"
-        className={clsx(
-          'origin-center transition',
-          open && 'scale-90 opacity-0',
-        )}
-      />
-      <path
-        d="M2 2L12 12M12 2L2 12"
-        className={clsx(
-          'origin-center transition',
-          !open && 'scale-90 opacity-0',
-        )}
-      />
-    </svg>
-  )
-}
+import menuIcon from '@/images/icons/menu.svg'
 
-function MobileNavigation() {
+const navigation = [
+  { name: 'Vantagens', href: '#advantages' },
+  { name: 'Preços', href: '#pricing' },
+]
+
+export default function Header() {
+  const [drawerActive, setDrawerActive] = useState(false)
+  
+  const drawerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!drawerActive) return
+
+    drawerRef.current?.focus()
+  }, [drawerActive])
+
   return (
-    <Popover>
-      <PopoverButton
-        className="relative z-10 flex h-8 w-8 items-center justify-center ui-not-focus-visible:outline-none"
-        aria-label="Toggle Navigation"
+    <header className="absolute top-0 inset-x-0 flex items-center max-w-[1248px] w-full pt-10 pb-6 px-5 bg-white z-50 lg:static lg:block lg:py-6 lg:mx-auto">
+      <div className="flex flex-1 lg:hidden">
+        <Logo />
+      </div>
+
+      <div className="flex lg:hidden">
+        <button
+          type="button"
+          className="flex"
+          aria-expanded={drawerActive} 
+          aria-controls="drawer"
+          aria-haspopup="dialog"
+          onClick={() => setDrawerActive(true)}
+        >
+          <Image
+            src={menuIcon}
+            alt='Icone abrir menu'
+            width={20}
+            height={36}
+          />
+        </button>
+      </div>
+
+      <div
+        ref={drawerRef}
+        {...(!drawerActive ? {} : {
+          role: "dialog",
+          tabIndex: -1,
+        })}
       >
-        {({ open }) => <MobileNavIcon open={open} />}
-      </PopoverButton>
-      <PopoverBackdrop
-        transition
-        className="fixed inset-0 bg-slate-300/50 duration-150 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in"
-      />
-      <PopoverPanel
-        transition
-        className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in"
-      >
-        <MobileNavLink href="#features">Funcionalidades</MobileNavLink>
-        {/* <MobileNavLink href="#testimonials">Depoimentos</MobileNavLink> */}
-        <MobileNavLink href="#pricing">Preços</MobileNavLink>
-        {/* <hr className="m-2 border-slate-300/40" /> */}
-        {/* <MobileNavLink href="app.soumotors.com">Entrar</MobileNavLink> */}
-      </PopoverPanel>
-    </Popover>
-  )
-}
-
-export function Header() {
-  return (
-    <header className="py-10">
-      <Container>
-        <nav className="relative z-50 flex justify-between">
-          <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
-              {/* <Logo className="h-10 w-auto" /> */}
-              <Image src={souMotors} alt="logo" className="h-10 w-auto" />
-            </Link>
-            <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Funcionalidades</NavLink>
-              {/* <NavLink href="#testimonials">Depoimentos</NavLink> */}
-              <NavLink href="#pricing">Preços</NavLink>
-            </div>
+        <nav
+          className={clsx([
+            "fixed inset-y-0 right-0 translate-x-full data-[drawer-active=true]:translate-x-0 transition-transform duration-300 z-10 flex flex-col gap-4 max-w-[280px] w-full bg-white py-10 px-5",
+            "lg:static lg:translate-x-0 lg:flex-row lg:justify-between lg:items-center lg:gap-0 lg:max-w-full lg:p-0"
+          ])}
+          data-drawer-active={drawerActive}
+        >
+          <div className="flex lg:flex-1">
+            <Logo />
           </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
-              {/* <NavLink href="app.soumotors.com">Entrar</NavLink> */}
-            </div>
-            <Button href="https://app.soumotors.com/sign-up" color="blue">
-              <span>
-                Começar <span className="hidden lg:inline">hoje</span>
-              </span>
-            </Button>
-            <div className="-mr-1 md:hidden">
-              <MobileNavigation />
-            </div>
+
+          <div className="flex flex-col gap-4 lg:flex-row lg:gap-x-16">
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-sm font-medium text-mirage-950"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex lg:flex-1 lg:justify-end">
+            <Link
+              className='lg:max-w-[260px]'
+              href={TEST_DRIVE_LINK}
+              externalLink
+            >
+              Avaliação gratuita por 7 dias
+            </Link>
           </div>
         </nav>
-      </Container>
+      </div>
+
+      <div
+        className='fixed inset-0 bg-black opacity-0 pointer-events-none data-[drawer-active=true]:opacity-40 data-[drawer-active=true]:pointer-events-auto transition-all	duration-300 lg:hidden'
+        data-drawer-active={drawerActive}
+        aria-hidden="true"
+        onClick={() => setDrawerActive(false)}
+      />
     </header>
   )
 }
