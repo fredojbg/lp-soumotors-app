@@ -4,8 +4,8 @@ import Link from "./Link";
 import { TEST_DRIVE_LINK } from "@/constant/test-drive-link";
 
 import mouseIcon from "@/images/icons/mouse.svg"
-import heroDesk from "@/images/hero-image-area-desktop-2.png"
-import heroMob from "@/images/hero-image-area-mobile.png"
+import heroDesk from "@/images/hero-image-area-desktop-2.webp"
+import heroMob from "@/images/hero-image-area-mobile.webp"
 
 export default function SectionHero() {
   return (
